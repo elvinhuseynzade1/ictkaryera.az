@@ -1,0 +1,287 @@
+{% extends "base.html" %}
+{% load static %}
+{% load thumbnail %}
+
+{% block content %}
+
+
+
+
+
+<div class="home">
+
+		<!-- Home Slider -->
+		<div class="home_slider_container">
+			<div class="owl-carousel owl-theme home_slider">
+			
+				
+		{% for c in carousel %}
+				<!-- Slide -->
+				<div class="owl-item home_slider_item">
+					<div class="background_image" style="background-image:url({{ c.image.url }})"></div>
+					<div class="home_slider_content text-center">
+						<div class="home_slider_content_inner" data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
+							<div class="home_category"><a style='color:white'>Career</a></div>
+							<div class="home_title">Building the Future</div>
+							<div class="home_text">{{ c.description|truncatewords:10 }}</div>
+						</div>
+					</div>
+				</div>
+    {% endfor %}
+	</div>
+
+			<!-- Home Slider Navigation -->
+			<div class="home_slider_nav home_slider_prev trans_200"><</div>
+			<div class="home_slider_nav home_slider_next trans_200">></div>
+		</div>
+	</div>
+
+	<!-- Intro -->
+
+	<div class="intro">
+		<div class="container">
+			<div class="flex-row">
+		     <div class="intro-item intro-item1">
+				<span>Trending Courses</span>
+			 </div>
+			 <div class=" intro-item intro-item2">
+				<span>Books & Library</span>
+			 </div>
+			 <div class="intro-item intro-item3">
+				<span>Certification</span>
+			</div>
+			
+<!-- 
+				<div class="intro_col">
+					<div class="intro_item">
+						<div class="intro_content trans_200"><a style='color:white'>Trending Courses</a></div>
+					</div>
+				</div>
+				<div class="intro_col">
+					<div class="intro_item">
+						<div class="intro_content trans_200"><a style='color:white'>Books & Library</a></div>
+					</div>
+				</div>
+
+			
+				<div class="intro_col">
+					<div class="intro_item">
+						<div class="intro_content trans_200"><a style='color:white' >Certification</a></div>
+					</div>
+				</div> -->
+
+				</div>
+			</div>
+		</div>
+	<!-- Content Container -->
+
+	<div class="content_container">
+		
+		<!-- Featured Title -->
+		<div class="featured_title">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="section_title_container d-flex flex-row align-items-start justify-content-start">
+							<div>
+								<div class="section_title">Featured Courses</div>
+							</div>
+							<div class="section_bar"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+
+			 	<!-- Main Content -->
+
+				<div class="col-lg-9">
+					<div class="main_content">
+						
+						<!-- Featured -->
+
+						<div class="featured">
+							<div class="row">
+{% for blg in  courses %}
+								<div class="col-lg-4">
+									<!-- Post -->
+									<div class="post_item post_v_small d-flex flex-column align-items-start justify-content-start">
+										<div class="post_image">
+										{% if blg.image %}
+												{% thumbnail blg.image "250x190" crop="center" as im %}
+													<a href="/courses/{{blg.id}}"><img  src="{{im.url}}" width="{{im.width}}" height="{{im.height}}"></a>
+												{% endthumbnail %}
+
+											{% else %}
+													<a href="/courses/{{blg.id}}"><img  src= "https://www.directivecommunication.net/wp-content/uploads/2014/03/no-image-found.jpg" width="{{im.width}}" height="{{im.height}}"></a>
+											{% endif %}
+										
+										</div>
+										<div class="post_content">
+											<div class="post_title"><a href="/courses/{{blg.id}}">{{blg.title|truncatewords:4}} </a> <span style='margin-left:20px'>Ranking : {{blg.rank}}</span> </div>
+											<div></div>
+										</div>
+									</div>
+								</div>
+					{% endfor %}
+							</div>
+						</div>
+						<br><br>
+						<div class="featured">
+						
+							<div class="section_title_container d-flex flex-row align-items-start justify-content-start">
+								<div>
+									<div class="section_title">Recent Books</div>
+								</div>
+								<div class="section_bar"></div>
+							</div>
+							<br><br>
+						<div class="row">
+					{% for blg in  books %}
+								<div class="col-lg-4">
+									<!-- Post -->
+									<div class="post_item post_v_small d-flex flex-column align-items-start justify-content-start">
+										<div class="post_image">
+										{% if blg.image %}
+												{% thumbnail blg.image "250x190" crop="center" as im %}
+													<a href="/books/{{blg.id}}"><img  src="{{im.url}}" width="{{im.width}}" height="{{im.height}}"></a>
+												{% endthumbnail %}
+
+											{% else %}
+													<a href="/books/{{blg.id}}"><img  src= "https://www.directivecommunication.net/wp-content/uploads/2014/03/no-image-found.jpg" width="{{im.width}}" height="{{im.height}}"></a>
+											{% endif %}
+										
+										</div>
+										<div class="post_content">
+											<div class="post_title"><a href="/books/{{blg.id}}">{{blg.title|truncatewords:4}} </a></div>
+											<div class="post_info d-flex flex-row align-items-center justify-content-start">
+											</div>
+										</div>
+									</div>
+								</div>
+					{% endfor %}
+							</div>
+
+						
+						</div>
+						<!-- Technology -->
+
+						<div class="technology">
+							<div class="section_title_container d-flex flex-row align-items-start justify-content-start">
+								<div>
+									<div class="section_title">Ranked Blogs</div>
+								</div>
+								<div class="section_bar"></div>
+							</div>
+							<div class="technology_content">
+								
+								<!-- Post -->
+									{% for blg in blogs  %}
+                  
+								<div class="post_item post_h_large">
+									<div class="row">
+										<div class="col-lg-5">
+											<div class="post_image">
+											
+											{% if blg.image %}
+												
+												{% thumbnail blg.image "350x280" crop="center" as im %}
+													<a href="/blogs/{{blg.id}}"><img  src="{{im.url}}" width="{{im.width}}" height="{{im.height}}"></a>
+												{% endthumbnail %}
+
+											{% else %}
+													<a href="/blogs/{{blg.id}}"><img  src= "https://www.directivecommunication.net/wp-content/uploads/2014/03/no-image-found.jpg" width="{{im.width}}" height="{{im.height}}"></a>
+											{% endif %}
+											
+
+											
+											</div>
+										</div>
+										<div class="col-lg-7">
+											<div class="post_content">
+												<div class="post_category cat_technology"> <a href="/category/{{blg.tag}}">{{blg.tag}}</a></div>
+												<div class="post_title"><a href="/blogs/{{blg.id}}">{{blg.title|truncatewords:4}}</a></div>
+												<div class="post_info d-flex flex-row align-items-center justify-content-start">
+													<div class="post_author d-flex flex-row align-items-center justify-content-start">
+														<div class="post_author_name"><a>{{blg.author.username}}</a></div>
+													</div>
+													<div class="post_date"><a> {{blg.created_date}}</a></div>
+
+												</div>
+											<div class="post_info ">Ranking  : {{blg.rank}}</div>
+
+												<div class="post_text">
+												{% with description=blg.content|safe %}
+												{{description|truncatechars_html:"20"}}
+												{% endwith %}
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+
+			{% endfor %}								
+
+							</div>
+						</div>
+
+						<!-- World -->
+
+						
+					</div>
+				</div>
+
+				<!-- Sidebar -->
+
+				<div class="col-lg-3">
+					<div class="sidebar">
+
+					
+						<!-- Latest Posts -->
+						<div class="sidebar_latest">
+							<div class="sidebar_title " id='mpc'><a href="/books/" style='color:black'>Most popular books</a></div>
+							<div class="latest_posts">
+								{% comment %} most popular courses {% endcomment %}
+							{% for mpb in mpbs %}
+								<div class="latest_post d-flex flex-row align-items-start justify-content-start">
+									<div><div class="latest_post_image"><img src="{{mpb.image.url}}" alt="https://unsplash.com/@agkdesign"></div></div>
+									<div class="latest_post_content">
+										<div class="latest_post_title"><a >{{mpb.title}}</a></div>
+									</div>
+								</div>
+						{% endfor %}
+
+								
+
+							</div>
+						</div>
+
+						<!-- Most Viewed -->
+
+						
+
+						<!-- Tags -->
+
+						<div class="tags">
+							<div class="sidebar_title">Tags</div>
+							<div class="tags_content d-flex flex-row align-items-start justify-content-start flex-wrap">
+								{% for c in ctgries %}
+								<div style='color:white;' class="tag {% if "c" in c.name %} cat_technology {% elif "a" in c.name %} cat_video {% else %} cat_new{% endif %}"><a  style='color:white;'  href="/category/{{c.name}}">{{c.name}}</a></div>
+									
+								{% endfor %}
+							</div>
+						</div>
+
+				
+
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+{% endblock content %}

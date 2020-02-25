@@ -1,0 +1,335 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<title>ICT karyera</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="ICTKARYERA">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap-4.1.2/bootstrap.min.css' %}">
+<link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+{% endblock links %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/extra.css' %}">
+
+</head>
+<style>
+.post_text *{
+	color:black;
+	font-size:17;
+}
+  .dropdown-toggle::after { 
+        } 
+@media only screen and (max-width: 500px) {
+  #temp {
+    display: none;
+  }
+}
+
+
+
+		</style>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<!-- Header Content -->
+		<div class="header_content_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justfy-content-start">
+							<div class="logo_container">
+								<a href="/">
+									<div class="logo"><span class='pt-2'>ICTKARYERA.AZ</span></div>
+								</a>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header Navigation & Search -->
+		<div class="header_nav_container" id="header">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
+							
+							<!-- Logo -->
+							<div class="logo_container">
+								<a href="/">
+									<div class="logo"><span>ICTKARYERA</span></div>
+								</a>
+							</div>
+
+							<!-- Navigation -->
+							<nav class="main_nav">
+								<ul class="main_nav_list d-flex flex-row align-items-center justify-content-start">
+									<li><a href="/">Home</a></li>
+
+ 
+ <li class="blogs">
+	 <a href="#dropdown">Blogs</a>
+	 <div class="dropdown__menu" id="dropdown">
+		<a class="dropdown-item" href="/create/">Blog share</a>
+		<a class="dropdown-item" href="/category/Technology/">Technology</a>
+		<a class="dropdown-item" href="/category/Design/">Design</a>
+		<a class="dropdown-item" href="/category/Programming/">Programming</a>
+		<a class="dropdown-item" href="/category/Data%20Science/">Data Science</a>
+		<a class="dropdown-item" href="/category/Photography/">Photography</a>
+	 </div>
+ </li>
+ <li class="books">
+	<a href="/books/">Books</a>
+	<div class="dropdown__menu" id="dropdown">
+		<a class="dropdown-item" href="/book/IT/">IT</a>
+		<a class="dropdown-item" href="/book/Design/">Design</a>
+		<a class="dropdown-item" href="/book/Programming/">Programming</a>
+		<a class="dropdown-item" href="/book/Other/">Other</a>
+	</div>
+</li>
+<li class="courses">
+	<a href="#dropdown">Courses</a>
+	<div class="dropdown__menu" id="dropdown">
+		<a class="dropdown-item" href="/course/IT%20&%20Software/">	IT & Software</a>
+		<a class="dropdown-item" href="/course/Design/">Design</a>
+		<a class="dropdown-item" href="/course/Development/">Development</a>
+		<a class="dropdown-item" href="/course/Office%20Productivity/">Office Productivity</a>
+		<a class="dropdown-item" href="/course/Business/">Business</a>
+		<a class="dropdown-item" href="/course/Academics/">Academics</a>
+	
+	</div>
+</li>
+									<li><a href="/about">About</a></li>
+
+  <!-- <li class="">
+	 
+	   <div class="dropdown hover-click">
+  <a class="dropdown-toggle" style='color:#4f4d4d' href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Blogs
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+	<a class="dropdown-item" href="/create/">Blog share</a>
+    <a class="dropdown-item" href="/category/Technology/">Technology</a>
+    <a class="dropdown-item" href="/category/Design/">Design</a>
+    <a class="dropdown-item" href="/category/Programming/">Programming</a>
+    <a class="dropdown-item" href="/category/Data%20Science/">Data Science</a>
+    <a class="dropdown-item" href="/category/Photography/">Photography</a>
+  </div>
+</div>
+
+</!-->  
+
+
+ <!-- <li class="">
+	 
+	   <div class="dropdown hover-click">
+  <a class="dropdown-toggle" style='color:#4f4d4d' href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Books
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="/book/IT/">IT</a>
+    <a class="dropdown-item" href="/book/Design/">Design</a>
+    <a class="dropdown-item" href="/book/Programming/">Programming</a>
+    <a class="dropdown-item" href="/book/Other/">Other</a>
+
+  </div>
+</div>
+
+</li>
+
+ <li class="menu_mm">
+	 
+	   <div class="dropdown hover-click">
+  <a class="dropdown-toggle" style='color:#4f4d4d' href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Courses
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="/course/IT%20&%20Software/">	IT & Software</a>
+    <a class="dropdown-item" href="/course/Design/">Design</a>
+    <a class="dropdown-item" href="/course/Development/">Development</a>
+    <a class="dropdown-item" href="/course/Office%20Productivity/">Office Productivity</a>
+    <a class="dropdown-item" href="/course/Business/">Business</a>
+    <a class="dropdown-item" href="/course/Academics/">Academics</a>
+
+  </div>
+</div>
+
+</li>     -->
+ 
+
+
+								</ul>
+							</nav>
+							
+
+							<!-- Search -->
+							<div class="header_search_container ml-auto">
+								<div class="header_search">
+									<form action="/search" id="header_search_form" class="header_search_form d-flex flex-row align-items-center justfy-content-start">
+										<div><div class="header_search_activation"><i class="fa fa-search" aria-hidden="true"></i></div></div>
+										<input type="text" name='q' class="header_search_input" placeholder="Search" required="required">
+									</form>
+	
+								</div>
+							</div>
+					<nav class="main_nav">	
+								<ul class="main_nav_list d-flex flex-row align-items-center justify-content-end">
+						{% if user.is_authenticated %}
+							<li class=""><a ></a></li>
+							<li><a href="/profile/{{request.user.id}}">	<img style='border-radius: 50%;' width=40 class='mb-1'   src="https://avatars1.githubusercontent.com/u/48854668?s=400&v=4" alt=""></a> </li>
+							<li class=""><a href="/logout">Logout</a></li>
+						{% else %}
+							<li class=""><a ></a></li>
+
+							<li class=""><a href="/login">Login</a></li>
+							<li class=""><a href="/signup">Signup</a></li>
+						{% endif %}
+								</ul>
+							</nav>
+							<!-- Hamburger -->
+							<div class="hamburger ml-auto menu_mm"><i class="fa fa-bars  trans_200 menu_mm" aria-hidden="false"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+		<div class="search">
+			<form action="/search" class="header_search_form menu_mm">
+				<input type="search" name='q' class="search_input menu_mm" placeholder="Search" required="required">
+				<button class="header_search_button d-flex flex-column align-items-center justify-content-center menu_mm">
+					<i class="fa fa-search menu_mm" aria-hidden="true"></i>
+				</button>
+			</form>
+		</div>
+		<nav class="menu_nav">
+			<ul class="menu_mm">
+				<li class="menu_mm"><a href="/">Home</a></li>
+ <li class="menu_mm">
+	 
+	   <div class="dropdown">
+  <a class="dropdown-toggle" style='color:#4f4d4d' href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Blogs
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+	<a class="dropdown-item" href="/create/">Blog share</a>
+    <a class="dropdown-item" href="/category/Technology/">Technology</a>
+    <a class="dropdown-item" href="/category/Design/">Design</a>
+    <a class="dropdown-item" href="category/Development/">Programming</a>
+    <a class="dropdown-item" href="/category/Data%20Science/">Data Science</a>
+    <a class="dropdown-item" href="category/Photography/">Photography</a>
+
+  </div>
+</div>
+
+</li>
+
+ <li class="menu_mm">
+	 
+	   <div class="dropdown">
+  <a class="dropdown-toggle" style='color:#4f4d4d' href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Books
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="/book/IT/">IT</a>
+    <a class="dropdown-item" href="/book/Design/">Design</a>
+    <a class="dropdown-item" href="/book/Programming/">Programming</a>
+    <a class="dropdown-item" href="/category/Other/">Other</a>
+
+  </div>
+</div>
+
+</li>
+
+
+ <li class="menu_mm">
+	 
+	   <div class="dropdown">
+  <a class="dropdown-toggle" style='color:#4f4d4d' href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Courses
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="/course/IT%20&%20Software/">	IT & Software</a>
+    <a class="dropdown-item" href="/course/Design/">Design</a>
+    <a class="dropdown-item" href="/course/Development/">Development</a>
+    <a class="dropdown-item" href="/course/Office%20Productivity/">Office Productivity</a>
+    <a class="dropdown-item" href="/course/Business/">Business</a>
+    <a class="dropdown-item" href="/course/Academics/">Academics</a>
+
+  </div>
+</div>
+
+</li>
+				<li class="menu_mm"><a href="/about">About</a></li>
+
+
+
+						{% if user.is_authenticated %}
+							<li class="menu_mm"><a ></a></li>
+							<li class='menu_mm'><a href="/profile/{{request.user.id}}">Profile</a></li>
+
+							<li class="menu_mm"><a href="/logout">Logout</a></li>
+						{% else %}
+							<li class="menu_mm"><a href="/login">Login</a></li>
+							<li class="menu_mm"><a href="/signup">Signup</a></li>
+						{% endif %}
+			</ul>
+		</nav>
+
+					<div id="fb-root"></div>
+								
+	</div>
+
+	<!-- Home -->
+		{% block content %}{% endblock content %}
+	<!-- Footer -->
+{% include "footer.html" %}
+</div>
+{% block scripts %}
+<script src="{% static 'js/jquery-3.2.1.min.js' %} "></script>
+<script src="{% static 'styles/bootstrap-4.1.2/popper.js' %}"></script>
+<script src="{% static 'styles/bootstrap-4.1.2/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/TweenMax.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/TimelineMax.min.js' %}"></script>
+<script src="{% static 'plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/animation.gsap.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+<script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+<script src="{% static 'plugins/easing/easing.js' %}"></script>
+<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+{% endblock scripts %}
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0&appId=184425506114338&autoLogAppEvents=1"></script>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+.footer-wrapper {
+  color: white;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+}
+
+@media (max-width: 400px) {
+  .footer-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 0.6rem;
+  }
+}
+
+.social-media-item {
+  margin-left: 10px;
+}
+
+.fa-twitter {
+  color: blue;
+}
+
+.post_text {
+  color: black;
+}
+.blogs,
+.books,
+.courses {
+  position: relative;
+}
+.courses .dropdown__menu {
+  width: 13rem;
+  height: 13rem;
+}
+.books .dropdown__menu {
+  height: 9rem;
+}
+.dropdown__menu {
+  padding: 1rem 0;
+  position: absolute;
+  background: #eee;
+  width: 10rem;
+  height: 13rem;
+  left: 0;
+  top: 1rem;
+  opacity: 0;
+  visibility: hidden;
+}
+.blogs a:hover + .dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+}
+.books a:hover + .dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+}
+.courses a:hover + .dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown__menu:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.right-side * {
+  float: right;
+  color: #2b2e38;
+}
+.right-side span {
+  float: right;
+  margin-left: 10px;
+}
+
+@media (max-width: 400px) {
+  .right-side span {
+    float: left;
+  }
+}
+header {
+  background-color: #ffc107;
+}
+header .pt-2 {
+  color: #2b2e38;
+}
+header .logo {
+  background-color: ;
+}
+.footer-wrapper {
+  color: #2b2e38;
+  padding: 2rem;
+  background-color: white;
+  display: grid;
+  background-color: #ffc107;
+
+  grid-template-columns: 5fr 2fr;
+}
+.header_social ul li a i:hover {
+  color: #ffc107;
+}
+.main_nav_list li a:hover {
+  color: #ffc107;
+}
+
+.header_search_activation:hover i {
+  color: #ffc107;
+}
+
+.menu_nav ul li a:hover {
+  color: #ffc107;
+}
+.menu_subscribe a:hover {
+  color: #ffc107;
+}
+
+.menu_social ul li a i:hover {
+  color: #ffc107;
+}
+
+.home_title {
+  font-size: 60px;
+  color: #ffc107;
+  margin-top: 2px;
+  line-height: 1.2;
+}
